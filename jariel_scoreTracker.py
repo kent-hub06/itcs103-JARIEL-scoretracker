@@ -42,21 +42,21 @@ def show_records():
         text.insert(tk.END, f"{row[0]}\t{row[1]}\t{row[2]}\n")
 
 # GUI setup
-root = tk.Tk()
-root.title("Student Score Tracker")
+window = tk.Tk()
+window.title("Student Score Tracker")
 
-tk.Label(root, text="Student Name:").grid(row=0, column=0, padx=5, pady=5)
-entry_name = tk.Entry(root)
+tk.Label(window, text="Student Name:").grid(row=0, column=0, padx=5, pady=5)
+entry_name = tk.Entry(window)
 entry_name.grid(row=0, column=1, padx=5, pady=5)
 
-tk.Label(root, text="Score:").grid(row=1, column=0, padx=5, pady=5)
-entry_score = tk.Entry(root)
+tk.Label(window, text="Score:").grid(row=1, column=0, padx=5, pady=5)
+entry_score = tk.Entry(window)
 entry_score.grid(row=1, column=1, padx=5, pady=5)
 
-button_save = tk.Button(root, text="Save Score", command=save_score)
+button_save = tk.Button(window, text="Save Score", command=save_score)
 button_save.grid(row=2, column=0, padx=5, pady=10)
 
-btn_show = tk.Button(root, text="Show Records", command=show_records)
-btn_show.grid(row=2, column=1, padx=5, pady=10)
+button_show = tk.Button(window, text="Show Records", command=show_records)
+button_show.grid(row=2, column=1, padx=5, pady=10)
 
-root.mainloop()
+window.mainloop()
