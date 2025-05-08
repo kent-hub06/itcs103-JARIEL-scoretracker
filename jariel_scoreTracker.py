@@ -30,7 +30,7 @@ def save_score():
         messagebox.showerror("Error", "Please enter a valid number for score.")
 
 def show_records():
-    records_window = tk.Toplevel(root)
+    records_window = tk.Toplevel(window)
     records_window.title("All Student Records")
     
     text = tk.Text(records_window, width=40, height=20)
